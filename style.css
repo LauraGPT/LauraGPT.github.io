@@ -339,6 +339,7 @@ a:hover, a:active {
 .hero-content {
     background: url("images/lauragpt.png") no-repeat center;
     background-size: cover;
+    background-color: white;
 }
 
 .hero-content-overlay {

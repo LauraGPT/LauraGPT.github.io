@@ -1,0 +1,4 @@
+example_zh2en_1 青海三江源地区是我国乃至亚洲重要的生态屏障和水源涵养区，而青海湖是控制西部荒漠化向东蔓延的天然屏障和生态功能区。	Qinghai Sanjiangyuan area is an important ecological barrier and water nourishing area in China and Asia, while Qinghai Lake is a natural barrier and ecological function zone to control the eastward spread of western desertification.
+example_zh2en_2 世界饮料创新奖表彰了全球饮料行业新老品牌今年最具雄心的新产品和新发展。	World Beverage Innovation Awards recognize the most ambitious new products and developments of new and established brands in the global beverage industry this year.
+example_en2zh_1 If you have any questions, please feel free to contact us through the eBay emailing system.	如果您有任何疑问,请随时通过eBay电子邮件系统与我们联系。
+example_en2zh_2 Our aim is to offer our customers the best service possible.	我们的目标是为客户提供最好的服务。

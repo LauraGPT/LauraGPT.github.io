@@ -328,39 +328,197 @@ of general audio using natural language
                         </table>
                     </div>
 
-<!--                    <h4>2. Text-to-speech synthesis (TTS) samples</h4>-->
-<!--                    <br/>-->
-<!--                    <div class="table-responsive">-->
-<!--                        <table class="table table-striped table-bordered">-->
-<!--                            <thead>-->
-<!--                                <tr>-->
-<!--                                    <th class="text-center align-middle">Prompt text</th>-->
-<!--                                    <th class="text-center align-middle">Text</th>-->
-<!--                                    <th class="text-center align-middle">Prompt Speech + Synthesis Speech</th>-->
-<!--                                </tr>-->
-<!--                            </thead>-->
-<!--                            <tbody class="text-center align-middle">-->
-<!--                                <tr>-->
-<!--                                    <td>-->
-<!--                                        later in accordance with what i believe to be the modern practice-->
-<!--                                    </td>-->
-<!--                                    <td>-->
-<!--                                        <p> i always accept the gift, after deprecating the-->
-<!--                                            honour with words and gestures, and a little later,-->
-<!--                                            in accordance with what i believe to be the modern-->
-<!--                                            practice, return the compliment. </p>-->
-<!--                                    </td>-->
-<!--                                    <td>-->
-<!--                                        <audio controls="controls">-->
-<!--                                            <source src="audio/ptts/tts_libritts_2104_78240_000016_000000.wav" type="audio/wav" />-->
-<!--                                        </audio>-->
-<!--                                    </td>-->
-<!--                                </tr>-->
+                    <h4>2. Text-to-speech synthesis (TTS) samples</h4>
+                    <br/>
+                    <h6>[Prompt: 1995_1837_000020_000000] Up in the sick room Zora lay on the little white bed. [Continuation: 1995_1836_000003_000002] At last the Cotton Combine was to all appearances an assured fact and he was slated for the Senate.</h6>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th class="text-center align-middle">Prompt wav (16k)</th>
+                                    <th class="text-center align-middle">Ground-truth (16k)</th>
+                                    <th class="text-center align-middle">VALLE-Phone</th>
+                                    <th class="text-center align-middle">VALLE-Token</th>
+                                    <th class="text-center align-middle">LauraGPT</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center align-middle">
+                                <tr>
+                                    <td>
+                                        <audio controls="controls">
+                                            <source src="audio/tts_samples/p1995_1837_000020_000000/prompt_p1995_1837_000020_000000.wav" type="audio/wav" />
+                                        </audio>
+                                    </td>
 
+                                    <td>
+                                        <audio controls="controls">
+                                            <source src="audio/tts_samples/p1995_1837_000020_000000/1995_1836_000003_000002_16k.wav" type="audio/wav" />
+                                        </audio>
+                                    </td>
 
-<!--                            </tbody>-->
-<!--                        </table>-->
-<!--                    </div>-->
+                                    <td>
+                                        <audio controls="controls">
+                                            <source src="audio/tts_samples/p1995_1837_000020_000000/valle_phn_p1995_1837_000020_000000.wav" type="audio/wav" />
+                                        </audio>
+                                    </td>
+
+                                    <td>
+                                        <audio controls="controls">
+                                            <source src="audio/tts_samples/p1995_1837_000020_000000/valle_token_p1995_1837_000020_000000.wav" type="audio/wav" />
+                                        </audio>
+                                    </td>
+
+                                    <td>
+                                        <audio controls="controls">
+                                            <source src="audio/tts_samples/p1995_1837_000020_000000/lauraGPT_p1995_1837_000020_000000.wav" type="audio/wav" />
+                                        </audio>
+                                    </td>
+                                </tr>
+
+<!--                <br/>-->
+                    <div class="table-responsive">
+                        <table class="table table-striped table-bordered">
+                    <h6>[Prompt: 2830_3980_000018_000001] Humble man that he was, he will not now take a back seat. [Continuation: 2830_3980_000018_000000] Against these boasting, false apostles, Paul boldly defends his apostolic authority and ministry.</h6>
+
+                            <thead>
+                                <tr>
+                                    <th class="text-center align-middle">Prompt wav (16k)</th>
+                                    <th class="text-center align-middle">Ground-truth (16k)</th>
+                                    <th class="text-center align-middle">VALLE-Phone</th>
+                                    <th class="text-center align-middle">VALLE-Token</th>
+                                    <th class="text-center align-middle">LauraGPT</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center align-middle">
+                                <tr>
+                                    <td>
+                                        <audio controls="controls">
+                                            <source src="audio/tts_samples/p2830_3980_000018_000001/prompt_p2830_3980_000018_000001.wav" type="audio/wav" />
+                                        </audio>
+                                    </td>
+
+                                    <td>
+                                        <audio controls="controls">
+                                            <source src="audio/tts_samples/p2830_3980_000018_000001/2830_3980_000018_000000_16k.wav" type="audio/wav" />
+                                        </audio>
+                                    </td>
+
+                                    <td>
+                                        <audio controls="controls">
+                                            <source src="audio/tts_samples/p2830_3980_000018_000001/valle_phn_p2830_3980_000018_000001.wav" type="audio/wav" />
+                                        </audio>
+                                    </td>
+
+                                    <td>
+                                        <audio controls="controls">
+                                            <source src="audio/tts_samples/p2830_3980_000018_000001/valle_token_p2830_3980_000018_000001.wav" type="audio/wav" />
+                                        </audio>
+                                    </td>
+
+                                    <td>
+                                        <audio controls="controls">
+                                            <source src="audio/tts_samples/p2830_3980_000018_000001/lauraGPT_p2830_3980_000018_000001.wav" type="audio/wav" />
+                                        </audio>
+                                    </td>
+                                </tr>
+
+<!--                <br/>-->
+                    <div class="table-responsive">
+                        <table class="table table-striped table-bordered">
+                    <h6>[Prompt: 6829_68771_000046_000000] A sudden wave of scarlet swept over Eliza's face. [Continuation: 6829_68769_000030_000000] Then he deliberately locked Kenneth and Beth in with the forger, and retreated along the passage.</h6>
+
+                            <thead>
+                                <tr>
+                                    <th class="text-center align-middle">Prompt wav (16k)</th>
+                                    <th class="text-center align-middle">Ground-truth (16k)</th>
+                                    <th class="text-center align-middle">VALLE-Phone</th>
+                                    <th class="text-center align-middle">VALLE-Token</th>
+                                    <th class="text-center align-middle">LauraGPT</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center align-middle">
+                                <tr>
+                                    <td>
+                                        <audio controls="controls">
+                                            <source src="audio/tts_samples/p6829_68771_000046_000000/prompt_p6829_68771_000046_000000.wav" type="audio/wav" />
+                                        </audio>
+                                    </td>
+
+                                    <td>
+                                        <audio controls="controls">
+                                            <source src="audio/tts_samples/p6829_68771_000046_000000/6829_68769_000030_000000_16k.wav" type="audio/wav" />
+                                        </audio>
+                                    </td>
+
+                                    <td>
+                                        <audio controls="controls">
+                                            <source src="audio/tts_samples/p6829_68771_000046_000000/valle_phn_p6829_68771_000046_000000.wav" type="audio/wav" />
+                                        </audio>
+                                    </td>
+
+                                    <td>
+                                        <audio controls="controls">
+                                            <source src="audio/tts_samples/p6829_68771_000046_000000/valle_token_p6829_68771_000046_000000.wav" type="audio/wav" />
+                                        </audio>
+                                    </td>
+
+                                    <td>
+                                        <audio controls="controls">
+                                            <source src="audio/tts_samples/p6829_68771_000046_000000/lauraGPT_p6829_68771_000046_000000.wav" type="audio/wav" />
+                                        </audio>
+                                    </td>
+                                </tr>
+
+<!--                <br/>-->
+                    <div class="table-responsive">
+                        <table class="table table-striped table-bordered">
+                    <h6>[Prompt: 8230_279154_000004_000008] To deal with this problem, we must have a theory of memory. [Continuation: 8230_279154_000019_000000] The first of our vague but indubitable data is that there is knowledge of the past.</h6>
+
+                            <thead>
+                                <tr>
+                                    <th class="text-center align-middle">Prompt wav (16k)</th>
+                                    <th class="text-center align-middle">Ground-truth (16k)</th>
+                                    <th class="text-center align-middle">VALLE-Phone</th>
+                                    <th class="text-center align-middle">VALLE-Token</th>
+                                    <th class="text-center align-middle">LauraGPT</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center align-middle">
+                                <tr>
+                                    <td>
+                                        <audio controls="controls">
+                                            <source src="audio/tts_samples/p6829_68771_000046_000000/lauraGPT_p6829_68771_000046_000000.wav" type="audio/wav" />
+                                        </audio>
+                                    </td>
+
+                                    <td>
+                                        <audio controls="controls">
+                                            <source src="audio/tts_samples/p8230_279154_000004_000008/8230_279154_000019_000000_16k.wav" type="audio/wav" />
+                                        </audio>
+                                    </td>
+
+                                    <td>
+                                        <audio controls="controls">
+                                            <source src="audio/tts_samples/p8230_279154_000004_000008/valle_phn_p8230_279154_000004_000008.wav" type="audio/wav" />
+                                        </audio>
+                                    </td>
+
+                                    <td>
+                                        <audio controls="controls">
+                                            <source src="audio/tts_samples/p8230_279154_000004_000008/valle_token_p8230_279154_000004_000008.wav" type="audio/wav" />
+                                        </audio>
+                                    </td>
+
+                                    <td>
+                                        <audio controls="controls">
+                                            <source src="audio/tts_samples/p8230_279154_000004_000008/lauraGPT_p8230_279154_000004_000008.wav" type="audio/wav" />
+                                        </audio>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
 
                     <h4>3. Speech to text translation (S2TT) samples</h4>
                     <br/>

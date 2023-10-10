@@ -129,6 +129,23 @@
                     <div class="course-content">
                         <div class="course-content-wrap">
                             <header class="entry-header">
+                                <h2 class="entry-title">S2ST</h2>
+
+                                <div class="entry-meta flex align-items-center">
+                                    <div class="course-author">
+                                        The LauraGPT model is capable of performing the advanced task of speech-to-speech translation (S2ST) by combining the S2TT and TTS tasks.
+                                    </div>
+                                </div>
+                            </header><!-- .entry-header -->
+                        </div>
+                    </div>
+                </div><!-- .col -->
+
+
+                <div class="col-12 col-md-6 col-lg-4 px-25">
+                    <div class="course-content">
+                        <div class="course-content-wrap">
+                            <header class="entry-header">
                                 <h2 class="entry-title">S2TT</h2>
 
                                 <div class="entry-meta flex align-items-center">
@@ -330,197 +347,516 @@ of general audio using natural language
 
                     <h4>2. Text-to-speech synthesis (TTS) samples</h4>
                     <br/>
-                    <h6>[Prompt: 1995_1837_000020_000000] Up in the sick room Zora lay on the little white bed. [Continuation: 1995_1836_000003_000002] At last the Cotton Combine was to all appearances an assured fact and he was slated for the Senate.</h6>
-                    <div class="table-responsive">
-                        <table class="table table-striped table-bordered">
-                            <thead>
-                                <tr>
-                                    <th class="text-center align-middle">Prompt wav (16k)</th>
-                                    <th class="text-center align-middle">Ground-truth (16k)</th>
-                                    <th class="text-center align-middle">VALLE-Phone</th>
-                                    <th class="text-center align-middle">VALLE-Token</th>
-                                    <th class="text-center align-middle">LauraGPT</th>
-                                </tr>
-                            </thead>
-                            <tbody class="text-center align-middle">
-                                <tr>
-                                    <td>
-                                        <audio controls="controls">
-                                            <source src="audio/tts_samples/p1995_1837_000020_000000/prompt_p1995_1837_000020_000000.wav" type="audio/wav" />
-                                        </audio>
-                                    </td>
+                    <h5>2.1 LibriTTS Zero Shot TTS</h5>
+                    <br/>
+                        <h6>[Prompt: 1995_1837_000020_000000] Up in the sick room Zora lay on the little white bed. [Continuation: 1995_1836_000003_000002] At last the Cotton Combine was to all appearances an assured fact and he was slated for the Senate.</h6>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center align-middle">Prompt wav (16k)</th>
+                                        <th class="text-center align-middle">Ground-truth (16k)</th>
+                                        <th class="text-center align-middle">VALL-E Phone</th>
+                                        <th class="text-center align-middle">VALL-E Token</th>
+                                        <th class="text-center align-middle">LauraGPT</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center align-middle">
+                                    <tr>
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/p1995_1837_000020_000000/prompt_p1995_1837_000020_000000.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
 
-                                    <td>
-                                        <audio controls="controls">
-                                            <source src="audio/tts_samples/p1995_1837_000020_000000/1995_1836_000003_000002_16k.wav" type="audio/wav" />
-                                        </audio>
-                                    </td>
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/p1995_1837_000020_000000/1995_1836_000003_000002_16k.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
 
-                                    <td>
-                                        <audio controls="controls">
-                                            <source src="audio/tts_samples/p1995_1837_000020_000000/valle_phn_p1995_1837_000020_000000.wav" type="audio/wav" />
-                                        </audio>
-                                    </td>
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/p1995_1837_000020_000000/valle_phn_p1995_1837_000020_000000.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
 
-                                    <td>
-                                        <audio controls="controls">
-                                            <source src="audio/tts_samples/p1995_1837_000020_000000/valle_token_p1995_1837_000020_000000.wav" type="audio/wav" />
-                                        </audio>
-                                    </td>
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/p1995_1837_000020_000000/valle_token_p1995_1837_000020_000000.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
 
-                                    <td>
-                                        <audio controls="controls">
-                                            <source src="audio/tts_samples/p1995_1837_000020_000000/lauraGPT_p1995_1837_000020_000000.wav" type="audio/wav" />
-                                        </audio>
-                                    </td>
-                                </tr>
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/p1995_1837_000020_000000/lauraGPT_p1995_1837_000020_000000.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
+                                    </tr>
 
-<!--                <br/>-->
-                    <div class="table-responsive">
-                        <table class="table table-striped table-bordered">
-                    <h6>[Prompt: 2830_3980_000018_000001] Humble man that he was, he will not now take a back seat. [Continuation: 2830_3980_000018_000000] Against these boasting, false apostles, Paul boldly defends his apostolic authority and ministry.</h6>
+    <!--                <br/>-->
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered">
+                        <h6>[Prompt: 2830_3980_000018_000001] Humble man that he was, he will not now take a back seat. [Continuation: 2830_3980_000018_000000] Against these boasting, false apostles, Paul boldly defends his apostolic authority and ministry.</h6>
 
-                            <thead>
-                                <tr>
-                                    <th class="text-center align-middle">Prompt wav (16k)</th>
-                                    <th class="text-center align-middle">Ground-truth (16k)</th>
-                                    <th class="text-center align-middle">VALLE-Phone</th>
-                                    <th class="text-center align-middle">VALLE-Token</th>
-                                    <th class="text-center align-middle">LauraGPT</th>
-                                </tr>
-                            </thead>
-                            <tbody class="text-center align-middle">
-                                <tr>
-                                    <td>
-                                        <audio controls="controls">
-                                            <source src="audio/tts_samples/p2830_3980_000018_000001/prompt_p2830_3980_000018_000001.wav" type="audio/wav" />
-                                        </audio>
-                                    </td>
+                                <thead>
+                                    <tr>
+                                        <th class="text-center align-middle">Prompt wav (16k)</th>
+                                        <th class="text-center align-middle">Ground-truth (16k)</th>
+                                        <th class="text-center align-middle">VALL-E Phone</th>
+                                        <th class="text-center align-middle">VALL-E Token</th>
+                                        <th class="text-center align-middle">LauraGPT</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center align-middle">
+                                    <tr>
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/p2830_3980_000018_000001/prompt_p2830_3980_000018_000001.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
 
-                                    <td>
-                                        <audio controls="controls">
-                                            <source src="audio/tts_samples/p2830_3980_000018_000001/2830_3980_000018_000000_16k.wav" type="audio/wav" />
-                                        </audio>
-                                    </td>
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/p2830_3980_000018_000001/2830_3980_000018_000000_16k.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
 
-                                    <td>
-                                        <audio controls="controls">
-                                            <source src="audio/tts_samples/p2830_3980_000018_000001/valle_phn_p2830_3980_000018_000001.wav" type="audio/wav" />
-                                        </audio>
-                                    </td>
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/p2830_3980_000018_000001/valle_phn_p2830_3980_000018_000001.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
 
-                                    <td>
-                                        <audio controls="controls">
-                                            <source src="audio/tts_samples/p2830_3980_000018_000001/valle_token_p2830_3980_000018_000001.wav" type="audio/wav" />
-                                        </audio>
-                                    </td>
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/p2830_3980_000018_000001/valle_token_p2830_3980_000018_000001.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
 
-                                    <td>
-                                        <audio controls="controls">
-                                            <source src="audio/tts_samples/p2830_3980_000018_000001/lauraGPT_p2830_3980_000018_000001.wav" type="audio/wav" />
-                                        </audio>
-                                    </td>
-                                </tr>
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/p2830_3980_000018_000001/lauraGPT_p2830_3980_000018_000001.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
+                                    </tr>
 
-<!--                <br/>-->
-                    <div class="table-responsive">
-                        <table class="table table-striped table-bordered">
-                    <h6>[Prompt: 6829_68771_000046_000000] A sudden wave of scarlet swept over Eliza's face. [Continuation: 6829_68769_000030_000000] Then he deliberately locked Kenneth and Beth in with the forger, and retreated along the passage.</h6>
+    <!--                <br/>-->
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered">
+                        <h6>[Prompt: 6829_68771_000046_000000] A sudden wave of scarlet swept over Eliza's face. [Continuation: 6829_68769_000030_000000] Then he deliberately locked Kenneth and Beth in with the forger, and retreated along the passage.</h6>
 
-                            <thead>
-                                <tr>
-                                    <th class="text-center align-middle">Prompt wav (16k)</th>
-                                    <th class="text-center align-middle">Ground-truth (16k)</th>
-                                    <th class="text-center align-middle">VALLE-Phone</th>
-                                    <th class="text-center align-middle">VALLE-Token</th>
-                                    <th class="text-center align-middle">LauraGPT</th>
-                                </tr>
-                            </thead>
-                            <tbody class="text-center align-middle">
-                                <tr>
-                                    <td>
-                                        <audio controls="controls">
-                                            <source src="audio/tts_samples/p6829_68771_000046_000000/prompt_p6829_68771_000046_000000.wav" type="audio/wav" />
-                                        </audio>
-                                    </td>
+                                <thead>
+                                    <tr>
+                                        <th class="text-center align-middle">Prompt wav (16k)</th>
+                                        <th class="text-center align-middle">Ground-truth (16k)</th>
+                                        <th class="text-center align-middle">VALL-E Phone</th>
+                                        <th class="text-center align-middle">VALL-E Token</th>
+                                        <th class="text-center align-middle">LauraGPT</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center align-middle">
+                                    <tr>
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/p6829_68771_000046_000000/prompt_p6829_68771_000046_000000.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
 
-                                    <td>
-                                        <audio controls="controls">
-                                            <source src="audio/tts_samples/p6829_68771_000046_000000/6829_68769_000030_000000_16k.wav" type="audio/wav" />
-                                        </audio>
-                                    </td>
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/p6829_68771_000046_000000/6829_68769_000030_000000_16k.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
 
-                                    <td>
-                                        <audio controls="controls">
-                                            <source src="audio/tts_samples/p6829_68771_000046_000000/valle_phn_p6829_68771_000046_000000.wav" type="audio/wav" />
-                                        </audio>
-                                    </td>
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/p6829_68771_000046_000000/valle_phn_p6829_68771_000046_000000.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
 
-                                    <td>
-                                        <audio controls="controls">
-                                            <source src="audio/tts_samples/p6829_68771_000046_000000/valle_token_p6829_68771_000046_000000.wav" type="audio/wav" />
-                                        </audio>
-                                    </td>
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/p6829_68771_000046_000000/valle_token_p6829_68771_000046_000000.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
 
-                                    <td>
-                                        <audio controls="controls">
-                                            <source src="audio/tts_samples/p6829_68771_000046_000000/lauraGPT_p6829_68771_000046_000000.wav" type="audio/wav" />
-                                        </audio>
-                                    </td>
-                                </tr>
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/p6829_68771_000046_000000/lauraGPT_p6829_68771_000046_000000.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
+                                    </tr>
 
-<!--                <br/>-->
-                    <div class="table-responsive">
-                        <table class="table table-striped table-bordered">
-                    <h6>[Prompt: 8230_279154_000004_000008] To deal with this problem, we must have a theory of memory. [Continuation: 8230_279154_000019_000000] The first of our vague but indubitable data is that there is knowledge of the past.</h6>
+    <!--                <br/>-->
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered">
+                        <h6>[Prompt: 8230_279154_000004_000008] To deal with this problem, we must have a theory of memory. [Continuation: 8230_279154_000019_000000] The first of our vague but indubitable data is that there is knowledge of the past.</h6>
 
-                            <thead>
-                                <tr>
-                                    <th class="text-center align-middle">Prompt wav (16k)</th>
-                                    <th class="text-center align-middle">Ground-truth (16k)</th>
-                                    <th class="text-center align-middle">VALLE-Phone</th>
-                                    <th class="text-center align-middle">VALLE-Token</th>
-                                    <th class="text-center align-middle">LauraGPT</th>
-                                </tr>
-                            </thead>
-                            <tbody class="text-center align-middle">
-                                <tr>
-                                    <td>
-                                        <audio controls="controls">
-                                            <source src="audio/tts_samples/p6829_68771_000046_000000/lauraGPT_p6829_68771_000046_000000.wav" type="audio/wav" />
-                                        </audio>
-                                    </td>
+                                <thead>
+                                    <tr>
+                                        <th class="text-center align-middle">Prompt wav (16k)</th>
+                                        <th class="text-center align-middle">Ground-truth (16k)</th>
+                                        <th class="text-center align-middle">VALL-E Phone</th>
+                                        <th class="text-center align-middle">VALL-E Token</th>
+                                        <th class="text-center align-middle">LauraGPT</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center align-middle">
+                                    <tr>
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/p8230_279154_000004_000008/prompt_p8230_279154_000004_000008.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
 
-                                    <td>
-                                        <audio controls="controls">
-                                            <source src="audio/tts_samples/p8230_279154_000004_000008/8230_279154_000019_000000_16k.wav" type="audio/wav" />
-                                        </audio>
-                                    </td>
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/p8230_279154_000004_000008/8230_279154_000019_000000_16k.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
 
-                                    <td>
-                                        <audio controls="controls">
-                                            <source src="audio/tts_samples/p8230_279154_000004_000008/valle_phn_p8230_279154_000004_000008.wav" type="audio/wav" />
-                                        </audio>
-                                    </td>
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/p8230_279154_000004_000008/valle_phn_p8230_279154_000004_000008.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
 
-                                    <td>
-                                        <audio controls="controls">
-                                            <source src="audio/tts_samples/p8230_279154_000004_000008/valle_token_p8230_279154_000004_000008.wav" type="audio/wav" />
-                                        </audio>
-                                    </td>
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/p8230_279154_000004_000008/valle_token_p8230_279154_000004_000008.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
 
-                                    <td>
-                                        <audio controls="controls">
-                                            <source src="audio/tts_samples/p8230_279154_000004_000008/lauraGPT_p8230_279154_000004_000008.wav" type="audio/wav" />
-                                        </audio>
-                                    </td>
-                                </tr>
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/p8230_279154_000004_000008/lauraGPT_p8230_279154_000004_000008.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
+                                    </tr>
+
+                    <h5>2.2 AISHELL Zero Shot TTS</h5>
+                    <br/>
+                        <h6>[Prompt: S0764_BAC009S0764W0169] 实施较大幅度的补贴政策 [Continuation: S0764_BAC009S0764W0285] 两家公司是联网汽车的主要芯片供应商。</h6>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center align-middle">Prompt wav (16k)</th>
+                                        <th class="text-center align-middle">Ground-truth (16k)</th>
+                                        <th class="text-center align-middle">VALL-E Phone</th>
+                                        <th class="text-center align-middle">VALL-E Token</th>
+                                        <th class="text-center align-middle">LauraGPT</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center align-middle">
+                                    <tr>
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/pS0764_BAC009S0764W0169/prompt_pS0764_BAC009S0764W0169.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
+
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/pS0764_BAC009S0764W0169/S0764_BAC009S0764W0285.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
+
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/pS0764_BAC009S0764W0169/valle_phn_pS0764_BAC009S0764W0169.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
+
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/pS0764_BAC009S0764W0169/valle_token_pS0764_BAC009S0764W0169.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
+
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/pS0764_BAC009S0764W0169/lauraGPT_pS0764_BAC009S0764W0169.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
+                                    </tr>
+
+    <!--                <br/>-->
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered">
+                        <h6>[Prompt: S0906_BAC009S0906W0202] 加强农牧互补牧养结合 [Continuation: S0906_BAC009S0906W0181] 月度市场成交量开始出现环比回升。</h6>
+
+                                <thead>
+                                    <tr>
+                                        <th class="text-center align-middle">Prompt wav (16k)</th>
+                                        <th class="text-center align-middle">Ground-truth (16k)</th>
+                                        <th class="text-center align-middle">VALL-E Phone</th>
+                                        <th class="text-center align-middle">VALL-E Token</th>
+                                        <th class="text-center align-middle">LauraGPT</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center align-middle">
+                                    <tr>
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/pS0906_BAC009S0906W0202/prompt_pS0906_BAC009S0906W0202.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
+
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/pS0906_BAC009S0906W0202/S0906_BAC009S0906W0181.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
+
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/pS0906_BAC009S0906W0202/valle_phn_pS0906_BAC009S0906W0202.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
+
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/pS0906_BAC009S0906W0202/valle_token_pS0906_BAC009S0906W0202.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
+
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/pS0906_BAC009S0906W0202/lauraGPT_pS0906_BAC009S0906W0202.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
+                                    </tr>
+
+    <!--                <br/>-->
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered">
+                        <h6>[Prompt: S0766_BAC009S0766W0321] 新能源汽车市场在逐步启动 [Continuation: S0766_BAC009S0766W0182] 转型后的今久整合营销集团。</h6>
+
+                                <thead>
+                                    <tr>
+                                        <th class="text-center align-middle">Prompt wav (16k)</th>
+                                        <th class="text-center align-middle">Ground-truth (16k)</th>
+                                        <th class="text-center align-middle">VALL-E Phone</th>
+                                        <th class="text-center align-middle">VALL-E Token</th>
+                                        <th class="text-center align-middle">LauraGPT</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center align-middle">
+                                    <tr>
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/pS0766_BAC009S0766W0321/prompt_pS0766_BAC009S0766W0321.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
+
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/pS0766_BAC009S0766W0321/S0766_BAC009S0766W0182.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
+
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/pS0766_BAC009S0766W0321/valle_phn_pS0766_BAC009S0766W0321.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
+
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/pS0766_BAC009S0766W0321/valle_token_pS0766_BAC009S0766W0321.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
+
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/pS0766_BAC009S0766W0321/lauraGPT_pS0766_BAC009S0766W0321.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
+                                    </tr>
+
+    <!--                <br/>-->
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered">
+                        <h6>[Prompt: S0908_BAC009S0908W0473] 参考消息网七月八日报道 [Continuation: S0908_BAC009S0908W0361] 帮助仰泳运动员改善自己的出发技术。</h6>
+
+                                <thead>
+                                    <tr>
+                                        <th class="text-center align-middle">Prompt wav (16k)</th>
+                                        <th class="text-center align-middle">Ground-truth (16k)</th>
+                                        <th class="text-center align-middle">VALL-E Phone</th>
+                                        <th class="text-center align-middle">VALL-E Token</th>
+                                        <th class="text-center align-middle">LauraGPT</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center align-middle">
+                                    <tr>
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/pS0908_BAC009S0908W0473/prompt_pS0908_BAC009S0908W0473.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
+
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/pS0908_BAC009S0908W0473/S0908_BAC009S0908W0361.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
+
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/pS0908_BAC009S0908W0473/valle_phn_pS0908_BAC009S0908W0473.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
+
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/pS0908_BAC009S0908W0473/valle_token_pS0908_BAC009S0908W0473.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
+
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/pS0908_BAC009S0908W0473/valle_token_pS0908_BAC009S0908W0473.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
+                                    </tr>
+
 
                             </tbody>
                         </table>
                     </div>
 
-                    <h4>3. Speech to text translation (S2TT) samples</h4>
+
+                    <h4>3. Zero-shot speech-to-speech translation (S2ST) samples</h4>
+                    <br/>
+
+<!--                    <br/>-->
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered">
+                                <h5>3.1 English-to-Chinese Translation using CoVOST2 dataset</h5>
+                                <thead>
+                                    <tr>
+                                        <th class="text-center align-middle">English Text</th>
+                                        <th class="text-center align-middle">English Speech</th>
+                                        <th class="text-center align-middle">LauraGPT Translated Speech</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center align-middle">
+                                    <tr>
+                                        <td>
+                                            two workers in orange vests perform their job.
+                                        </td>
+
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/covost_s2st/common_voice_en_649346_raw.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
+
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/covost_s2st/common_voice_en_649346_s2st.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            two boys are playing soccer in the water at the beach.
+                                        </td>
+
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/covost_s2st/common_voice_en_691448_raw.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
+
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/covost_s2st/common_voice_en_691448_s2st.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            many programming languages are named after real people.
+                                        </td>
+
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/covost_s2st/common_voice_en_700678_raw.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
+
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/covost_s2st/common_voice_en_700678_s2st.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
+
+                                    </tr>
+
+
+<!--                    <br/>-->
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered">
+                                <h5>3.2 Chinese-to-English Translation using BSTC dataset</h5>
+                                <thead>
+                                    <tr>
+                                        <th class="text-center align-middle">Chinese Text</th>
+                                        <th class="text-center align-middle">Chinese Speech</th>
+                                        <th class="text-center align-middle">LauraGPT Translated Speech</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center align-middle">
+                                    <tr>
+                                        <td>
+                                            但不是这种所有的可能性都可以在市场上成功的。
+                                        </td>
+
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/bstc_s2st/3063_36_raw.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
+
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/bstc_s2st/3063_36_s2st.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            要知道每个人都是怕输的，对吗？
+                                        </td>
+
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/bstc_s2st/3913_33_raw.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
+
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="audio/tts_samples/bstc_s2st/3913_33_s2st.wav" type="audio/wav" />
+                                            </audio>
+                                        </td>
+
+                                    </tr>
+
+
+
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <h4>4. Speech to text translation (S2TT) samples</h4>
                     <br/>
                     <div class="table-responsive">
                         <table class="table table-striped table-bordered">
@@ -614,7 +950,7 @@ of general audio using natural language
                         </table>
                     </div>
 
-                    <h4>4. Speech enhancement (SE) samples</h4>
+                    <h4>5. Speech enhancement (SE) samples</h4>
                     <br/>
                     <div class="table-responsive">
                         <table class="table table-striped table-bordered">
@@ -921,9 +1257,9 @@ of general audio using natural language
                         <table class="table table-striped table-bordered">
                             <thead>
                                 <tr>
-                                    <th class="text-center align-middle">Models / Datasets</th>
-<!--                                    <th class="text-center align-middle">Models size</th>-->
-<!--                                    <th class="text-center align-middle">Data size</th>-->
+                                    <th class="text-center align-middle">Models</th>
+                                    <th class="text-center align-middle">Models size</th>
+                                    <th class="text-center align-middle">Data size</th>
                                     <th class="text-center align-middle">AISHELL(test)</th>
                                     <th class="text-center align-middle">AISHELL-2(test-ios)</th>
                                     <th class="text-center align-middle">LibriSpeech(test-clean)</th>
@@ -932,25 +1268,49 @@ of general audio using natural language
                             </thead>
                             <tbody class="text-center align-middle">
                                 <tr>
-                                    <td>Paraformer Large</td>
-                                    <td>1.95</td>
-                                    <td>2.85</td>
-                                    <td>/</td>
-                                    <td>/</td>
+                                    <td>Paraformer (CN)</td>
+                                    <td>0.2 B</td>
+                                    <td>60K</td>
+                                    <td>2.0</td>
+                                    <td>2.9</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Paraformer (EN)</td>
+                                    <td>0.2 B</td>
+                                    <td>20K</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>3.5</td>
+                                    <td>8.2</td>
                                 </tr>
                                 <tr>
                                     <td>Whisper Large V2</td>
-                                    <td>/</td>
-                                    <td>/</td>
-                                    <td>2.70</td>
-                                    <td>5.24</td>
+                                    <td>1.5 B</td>
+                                    <td>680K</td>
+                                    <td>5.7</td>
+                                    <td>5.5</td>
+                                    <td>2.7</td>
+                                    <td>5.2</td>
+                                </tr>
+                                <tr>
+                                    <td>Discrete IO</td>
+                                    <td>1.8 B</td>
+                                    <td>22K</td>
+                                    <td>7.1</td>
+                                    <td>8.6</td>
+                                    <td>9.1</td>
+                                    <td>24.0</td>
                                 </tr>
                                 <tr>
                                     <td>LauraGPT</td>
-                                    <td>1.76</td>
-                                    <td>3.15</td>
-                                    <td>4.52</td>
-                                    <td>7.86</td>
+                                    <td>2.0 B</td>
+                                    <td>22K</td>
+                                    <td>1.8</td>
+                                    <td>3.2</td>
+                                    <td>4.4</td>
+                                    <td>7.7</td>
                                 </tr>
 
 
@@ -966,37 +1326,60 @@ of general audio using natural language
                         <table class="table table-striped table-bordered">
                             <thead>
                                 <tr>
-                                    <th class="text-center align-middle">Models / Datasets</th>
-                                    <th class="text-center align-middle">AISHELL(test)</th>
-                                    <th class="text-center align-middle">AISHELL-2(test-ios)</th>
-                                    <th class="text-center align-middle">LibriSpeech(test-clean)</th>
-                                    <th class="text-center align-middle">LibriSpeech(test-others)</th>
+<!--                                    <th class="text-center align-middle"><td>Models</td></th>-->
+<!--                                    <th class="text-center align-middle"><td colspan="3">AISHELL</td></th>-->
+<!--                                    <th class="text-center align-middle"><td colspan="3">LibriTTS</td></th>-->
+                                    <td colspan="1" class="text-center align-middle">Models</td>
+                                    <td colspan="3" class="text-center align-middle">AISHELL</td>
+                                    <td colspan="3" class="text-center align-middle">LibriTTS</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center align-middle"> - </td>
+                                    <td>CER ↓</td>
+                                    <td>SECS ↑</td>
+                                    <td>MOSNet ↑</td>
+                                    <td>CER ↓</td>
+                                    <td>SECS ↑</td>
+                                    <td>MOSNet ↑</td>
                                 </tr>
                             </thead>
                             <tbody class="text-center align-middle">
                                 <tr>
-                                    <td>Paraformer Large</td>
-                                    <td>1.95</td>
-                                    <td>2.85</td>
-                                    <td>/</td>
-                                    <td>/</td>
+                                    <td>Origin</td>
+                                    <td>1.70</td>
+                                    <td>0.92</td>
+                                    <td>3.27</td>
+                                    <td>2.90</td>
+                                    <td>0.94</td>
+                                    <td>3.35</td>
                                 </tr>
                                 <tr>
-                                    <td>Whisper Large V2</td>
-                                    <td>/</td>
-                                    <td>/</td>
-                                    <td>2.70</td>
-                                    <td>5.24</td>
+                                    <td>VALL-E Phone</td>
+                                    <td>4.75</td>
+                                    <td>0.91</td>
+                                    <td>3.22</td>
+                                    <td>4.30</td>
+                                    <td>0.92</td>
+                                    <td>3.28</td>
                                 </tr>
                                 <tr>
-                                    <td>LauraGPT</td>
-                                    <td>1.76</td>
-                                    <td>3.15</td>
-                                    <td>4.52</td>
-                                    <td>7.86</td>
+                                    <td>VALL-E Token</td>
+                                    <td>6.52</td>
+                                    <td>0.91</td>
+                                    <td>3.19</td>
+                                    <td>6.57</td>
+                                    <td>0.93</td>
+                                    <td>3.28</td>
                                 </tr>
-
-
+                                <tr>
+                                    <td>LauraGPT (Ours)</td>
+                                    <td>6.91</td>
+                                    <td>0.90</td>
+                                    <td>3.14</td>
+                                    <td>8.62</td>
+                                    <td>0.91</td>
+                                    <td>3.26</td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -1010,17 +1393,30 @@ of general audio using natural language
                             <thead>
                                 <tr>
                                     <th class="text-center align-middle">Models</th>
-                                    <th class="text-center align-middle">BSTC dev</th>
+                                    <th class="text-center align-middle">Zh→En</th>
+                                    <th class="text-center align-middle">En→Zh</th>
                                 </tr>
                             </thead>
                             <tbody class="text-center align-middle">
                                 <tr>
                                     <td>SMLTA ASR + pre-trained MT (Zhang et al., 2021)</td>
                                     <td>18.22</td>
+                                    <td>-</td>
                                 </tr>
                                 <tr>
-                                    <td>LauraGPT</td>
-                                    <td>17.75</td>
+                                    <td>Wang et al. (2020)</td>
+                                    <td>-</td>
+                                    <td>25.4</td>
+                                </tr>
+                                <tr>
+                                    <td>Discrete IO</td>
+                                    <td>5.1</td>
+                                    <td>5.0</td>
+                                </tr>
+                                <tr>
+                                    <td>LauraGPT (Ours)</td>
+                                    <td>17.8</td>
+                                    <td>38.5</td>
                                 </tr>
 
 
@@ -1037,28 +1433,53 @@ of general audio using natural language
                             <thead>
                                 <tr>
                                     <th class="text-center align-middle">Models</th>
-                                    <th class="text-center align-middle">PESQ</th>
-                                    <th class="text-center align-middle">STOI</th>
-                                    <th class="text-center align-middle">WER</th>
+                                    <th class="text-center align-middle">PESQ ↑</th>
+                                    <th class="text-center align-middle">STOI ↑</th>
+                                    <th class="text-center align-middle">CER ↓</th>
+                                    <th class="text-center align-middle">WER ↓</th>
                                 </tr>
                             </thead>
                             <tbody class="text-center align-middle">
                                 <tr>
-                                    <td>Raw</td>
+                                    <td>Clean</td>
+                                    <td>4.50</td>
+                                    <td>100.0</td>
+                                    <td>3.31</td>
+                                    <td>7.55</td>
+                                </tr>
+                                <tr>
+                                    <td>Clean_codec_syn</td>
+                                    <td>2.72</td>
+                                    <td>87.0</td>
+                                    <td>7.46</td>
+                                    <td>14.28</td>
+                                </tr>
+                                <tr>
+                                    <td>Noisy</td>
                                     <td>2.34</td>
-                                    <td>85.00</td>
+                                    <td>85.0</td>
+                                    <td>13.81</td>
                                     <td>23.00</td>
                                 </tr>
                                 <tr>
                                     <td>CMGAN</td>
-                                    <td>3.16</td>
-                                    <td>92.50</td>
-                                    <td>11.63</td>
+                                    <td>2.95</td>
+                                    <td>91.0</td>
+                                    <td>6.42</td>
+                                    <td>12.29</td>
+                                </tr>
+                                <tr>
+                                    <td>Discrete IO</td>
+                                    <td>1.96</td>
+                                    <td>64.0</td>
+                                    <td>40.91</td>
+                                    <td>53.97</td>
                                 </tr>
                                 <tr>
                                     <td>LauraGPT</td>
                                     <td>2.97</td>
-                                    <td>87.64</td>
+                                    <td>88.0</td>
+                                    <td>9.05</td>
                                     <td>15.94</td>
                                 </tr>
 
@@ -1076,47 +1497,40 @@ of general audio using natural language
                             <thead>
                                 <tr>
                                     <th class="text-center align-middle">Models</th>
-                                    <th class="text-center align-middle">BLEU-4</th>
-                                    <th class="text-center align-middle">SPIDEr</th>
-                                    <th class="text-center align-middle">CIDEr</th>
-                                    <th class="text-center align-middle">SPICE</th>
+                                    <th class="text-center align-middle">BLEU-4 ↑</th>
+                                    <th class="text-center align-middle">SPICE ↑</th>
+                                    <th class="text-center align-middle">CIDEr ↑</th>
+                                    <th class="text-center align-middle">SPIDEr ↑</th>
                                 </tr>
                             </thead>
                             <tbody class="text-center align-middle">
                                 <tr>
                                     <td>Oracle</td>
                                     <td>1.00</td>
-                                    <td>1.54</td>
-                                    <td>2.64</td>
                                     <td>0.43</td>
+                                    <td>2.64</td>
+                                    <td>1.54</td>
                                 </tr>
                                 <tr>
-                                    <td>GRU (Drossos et al., 2017)</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>0.18</td>
-                                    <td>-</td>
-                                </tr>
-                                <tr>
-                                    <td>Baseline</td>
+                                    <td>Drossos et al. (2020) (EncDec-Attn)</td>
                                     <td>0.02</td>
                                     <td>-</td>
                                     <td>0.10</td>
                                     <td>-</td>
                                 </tr>
                                 <tr>
-                                    <td>Ensemble</td>
+                                    <td>Koizumi et al. (2020) (Ensemble)</td>
                                     <td>-</td>
-                                    <td>0.207</td>
-                                    <td>0.319</td>
-                                    <td>0.094</td>
+                                    <td>0.09</td>
+                                    <td>0.32</td>
+                                    <td>0.21</td>
                                 </tr>
                                 <tr>
                                     <td>LauraGPT</td>
                                     <td>0.08</td>
-                                    <td>0.08</td>
-                                    <td>0.22</td>
                                     <td>0.15</td>
+                                    <td>0.22</td>
+                                    <td>0.08</td>
                                 </tr>
 
 
@@ -1125,7 +1539,7 @@ of general audio using natural language
                     </div>
 
                     <p class="lead font-weight-normal">
-                        6. Evaluations on speech enhancement (SE) task
+                        6. Evaluations on speech emotion recognition (SER) task
 
                     </p>
                     <div class="table-responsive">
@@ -1140,19 +1554,25 @@ of general audio using natural language
                             </thead>
                             <tbody class="text-center align-middle">
                                 <tr>
-                                    <td>WavLM Base</td>
+                                    <td>Chen et al. (2023) WavLM Base</td>
                                     <td>0.499</td>
                                     <td>0.201</td>
                                     <td>0.400</td>
                                 </tr>
                                 <tr>
-                                    <td>WavLM Large</td>
+                                    <td>Chen et al. (2023) WavLM Large</td>
                                     <td>0.542</td>
                                     <td>0.253</td>
                                     <td>0.476</td>
                                 </tr>
                                 <tr>
-                                    <td>LauraGPT</td>
+                                    <td>Chen et al. (2023) Vesper-12</td>
+                                    <td>0.535</td>
+                                    <td>0.268</td>
+                                    <td>0.480</td>
+                                </tr>
+                                <tr>
+                                    <td>LauraGPT (Ours)</td>
                                     <td>0.507</td>
                                     <td>0.312</td>
                                     <td>0.492</td>
@@ -1182,31 +1602,25 @@ of general audio using natural language
                             </thead>
                             <tbody class="text-center align-middle">
                                 <tr>
-                                    <td>Direct</td>
-                                    <td>81.73</td>
-                                    <td>77.11</td>
-                                    <td>75.05</td>
-                                    <td>61.24</td>
-                                    <td>65.42</td>
-                                    <td>63.26</td>
+                                    <td>Ravanelli et al. (2021) CRDNN</td>
+                                    <td>82.15</td>
+                                    <td>77.79</td>
+                                    <td>75.64</td>
+                                    <td>62.35</td>
+                                    <td>66.45</td>
+                                    <td>64.34</td>
                                 </tr>
                                 <tr>
-                                    <td>Direct (HuBERT)</td>
-                                    <td>91.24</td>
-                                    <td>88.47</td>
-                                    <td>87.54</td>
-                                    <td>72.93</td>
-                                    <td>77.40</td>
-                                    <td>75.10</td>
+                                    <td>Ravanelli et al. (2021) Wav2Vec 2.0</td>
+                                    <td>89.49</td>
+                                    <td>86.40</td>
+                                    <td>85.34</td>
+                                    <td>72.60</td>
+                                    <td>76.76</td>
+                                    <td>74.62</td>
                                 </tr>
                                 <tr>
-                                    <td>LauraGPT</td>
-                                    <td>91.04</td>
-                                    <td>89.07</td>
-                                    <td>87.87</td>
-                                </tr>
-                                <tr>
-                                    <td>LauraGPT</td>
+                                    <td>LauraGPT (Ours)</td>
                                     <td>91.04</td>
                                     <td>89.07</td>
                                     <td>87.87</td>
